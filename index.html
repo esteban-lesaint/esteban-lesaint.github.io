@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Site de Esteban Lesaint, Compositeur, Musicien et Biologiste.">
+  <meta name="keyword" content="Site de Esteban Lesaint, Compositeur, Musicien et Biologiste.">
+  <meta name="author" content="Esteban Lesaint">
+  <link rel="stylesheet" href="style.css">
+  <title>Esteban Lesaint Pedo Violeur</title>
+  <link rel="icon" type="image/png" href="img/LesaintEsteban.jpg"/>
+  <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+<body>
+  <!-- Header -->
+  <section id="header">
+    <div class="header container">
+      <div class="nav-bar">
+        <div class="brand">
+          <a href="#hero"><h1><span>  </span>Esteban Lesaint <span> Pedo Violeur</span></h1></a>
+        </div>
+        <div class="nav-list">
+          <div class="hamburger"><div class="bar"></div></div>
+          <ul>
+            <li><a href="#about" data-after="About">A propos de Esteban</a></li>
+            <li><a href="#contact" data-after="Contact">Ses Contacts</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Header -->
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="about container">
+      <div class="col-left">
+        <div class="about-img">
+          <img src="img/LesaintEsteban.jpg" alt="img-profile-Esteban-Le-Saint" name="Esteban Lesaint">
+        </div>
+      </div>
+      <div class="col-right">
+        <h1 class="section-title">A Propos De ESTEBAN LESAINT<span> VIOLEUR ET PEDOPHILE</span></h1>
+        <h2>Pedophilie et Viol répétés</h2>
+        <p>Esteban Lesaint a défloré à de multiples reprises sa cousine de 8 ans et n’a jamais reconnu les faits. Actuellement en Master Biologie-Environnement, il vit sa vie tranquillement à Nantes sans aucune conséquence pour ses actions. 
+          <br/>
+          <img src="img/victime-esteban-lesaint.webp" alt="img-victime-Esteban-Le-Saint">
+        <a href="https://www.linkedin.com/in/esteban-lesaint-7a0289171" target="_blank" class="cta">SON PROFIL LINKEDIN</a>
+        <a href="https://www.facebook.com/esteban.lesaint/" target="_blank" class="cta">SON PROFIL FACEBOOK</a>
+      </div>
+    </div>
+  </section>
+  <!-- End About Section -->
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="contact container">
+      <div><h1 class="section-title">Contact <span>info</span> <span class="wave">📱</span></h1></div>
+      <div class="contact-items">
+        <div class="contact-item">
+          <div class="icon"><img src="img/phone.png"/></div>
+          <div class="contact-info">
+            <h1>Téléphone Esteban Lesaint</h1>
+            <h2>+33 06 65 74 93 94</h2>
+            <a style="font-size: 15px;" href="tel:3014389131">Cliquez ici pour appeler <br> <span class="wave">👆</span> </a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="icon"><img src="img/email.png"/></div>
+          <div class="contact-info">
+            <h1>Son Email Outlook</h1>
+            <h2>lesaintesteban@outlook.fr</h2>
+            <a style="font-size: 15px;" href="mailto:lesaintesteban@outlook.fr">Son mail outlook<span class="wave">👆</span></a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="icon"><img src="img/email.png"/></div>
+          <div class="contact-info">
+            <h1>Son Email Gmail</h1>
+            <h2>lesaintesteban44@gmail.com</h2>
+            <a style="font-size: 15px;" href="mailto:lesaintesteban44@gmail.com">Son mail Gmail<span class="wave">👆</span></a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="icon"><img src="img/address.png"/></div>
+          <div class="contact-info">
+            <h1>Adresse</h1>
+            <h2>44470 THOUARE-SUR-LOIRE</h2>
+            <h2>2 RUE DU PORT</h2>
+            <h2>Batiment C, 2eme étage, Porte 208</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Contact Section -->
+
+  <!-- Footer -->
+  <section id="footer">
+  </section>
+  <!-- End Footer -->
+  <script src="app.js"></script>
+  <script>
+    fetch(url)
+      .then(function(response) {
+        return response.json();
+      })
+      .then(function(result) {
+        console.log(`🚀 🚀  ->  ~ .then ~ result`, result);
+        let nameProject1 = result[0].name;
+        let nameProject2 = result[1].name;
+        let nameProject3 = result[2].name;
+
+        let descProject1 = result[0].description;
+        let descProject2 = result[1].description;
+        let descProject3 = result[2].description;
+
+        document.getElementById('nameCard1').innerHTML=`<h1>${nameProject1}</h1>`
+        document.getElementById('nameCard2').innerHTML=`<h1>${nameProject2}</h1>`
+        document.getElementById('nameCard3').innerHTML=`<h1>${nameProject3}</h1>`
+
+        document.getElementById('descCard1').innerHTML=`<h3>${descProject1}</h3>`
+        document.getElementById('descCard2').innerHTML=`<h3>${descProject2}</h3>`
+        document.getElementById('descCard3').innerHTML=`<h3>${descProject3}</h3>`
+      });
+
+    // When the user clicks a project card
+    function redirect(op) {
+      fetch(url)
+        .then(function(response) {
+          return response.json();
+        })
+        .then(function(result) {
+          let redirect1 = result[0].svn_url;
+          let redirect2 = result[1].svn_url;
+          let redirect3 = result[2].svn_url;
+
+          if(op === 1){
+            window.open(redirect1)
+          }else if(op === 2){
+            window.open(redirect2)
+          }else{
+            window.open(redirect3)
+          }
+        });
+    }
+  </script>
+</body>
+</html>
